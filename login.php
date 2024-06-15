@@ -24,7 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             // 顯示收件夾功能連結
             echo "<h2>Inbox</h2>";
-            echo '<a href="inbox.php?username=' . urlencode($username) . '">Go to Inbox</a><br>';
+            echo '<form method="get" action="inbox.php">
+                <input type="hidden" name="username" value="' . htmlspecialchars($username, ENT_QUOTES, 'UTF-8') . '">
+                <button type="submit">Go to Inbox</button>
+            </form>';
 
             // 顯示寄件功能
             echo "<h2>Send a Message</h2>";

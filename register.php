@@ -17,11 +17,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Registration successful";
+        echo "Registration successful". "<br>";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql . "<br>" . $conn->error ;
     }
+
 }
+
+echo '<form method="get" action="index.html" style="display:inline;">
+<button type="submit">Back to Home</button>
+</form>';
 
 $conn->close();
 ?>
