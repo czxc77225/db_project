@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $delete_sql = "DELETE FROM emails WHERE id='$email_id'";
 
     if ($conn->query($delete_sql) === TRUE) {
-        echo "Email deleted successfully. <a href='view_sent_emails.php'>Go back to Sent Messages</a>";
+        echo "Email deleted successfully.";
     } else {
         echo "Error deleting email: " . $conn->error;
     }

@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $update_sql = "UPDATE emails SET recipient='$recipient', subject='$subject', body='$body' WHERE id='$email_id'";
 
     if ($conn->query($update_sql) === TRUE) {
-        echo "Email updated successfully. <a href='view_sent_emails.php'>Go back to Sent Messages</a>";
+        echo "Email updated successfully.";
     } else {
         echo "Error updating email: " . $conn->error;
     }

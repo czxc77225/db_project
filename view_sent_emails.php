@@ -64,6 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "No sent messages found.";
     }
+
 }
 
 $conn->close();
